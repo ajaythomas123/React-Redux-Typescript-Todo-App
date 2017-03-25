@@ -1,0 +1,13 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "ES6",
+    "jsx": "react"
+  },
+  "files": [
+    "./src/index.tsx"
+  ]
+}
