@@ -1,7 +1,6 @@
-import * as React from 'react';
-import { ITodoItem } from './ITodoItem';
+import React from 'react';
 
-const TodoItem = (props: any) => {
+const TodoItem = (props) => {
   return (
     <div>
     <h2>{props.text}</h2>

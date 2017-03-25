@@ -6,7 +6,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './src/index.tsx'
+    './src/index.js'
   ],
 
   output: {
@@ -23,19 +23,16 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.js', '.json']
   },
 
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.js?$/,
         use: [
           {
             loader: 'babel-loader'
-          },
-          {
-            loader: 'awesome-typescript-loader'
           }
         ]
       }
