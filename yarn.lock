@@ -2,61 +2,6 @@
 # yarn lockfile v1
 
 
-"@types/node@*":
-  version "7.0.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.11.tgz#55680189f2335f080f0aeb57871f0b9823646d89"
-
-"@types/react-dom@^0.14.23":
-  version "0.14.23"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-0.14.23.tgz#cecfcfad754b4c2765fe5d29b81b301889ad6c2e"
-  dependencies:
-    "@types/react" "*"
-
-"@types/react-redux@^4.4.38":
-  version "4.4.38"
-  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-4.4.38.tgz#771c9293fa835107eb5ac2e4ef8d52e54f2ed4ff"
-  dependencies:
-    "@types/react" "*"
-    redux "^3.6.0"
-
-"@types/react@*", "@types/react@^15.0.20":
-  version "15.0.20"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.20.tgz#3d4a05ed04a8b1847ac6c8fa6093591d3910fba5"
-
-"@types/redux-actions@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@types/redux-actions/-/redux-actions-1.2.3.tgz#4e012e75c2215ab787636b4519f0c0509ee6bafb"
-
-"@types/reselect@^2.0.27":
-  version "2.0.27"
-  resolved "https://registry.yarnpkg.com/@types/reselect/-/reselect-2.0.27.tgz#78a53338a99bb1bc4b6aea0e1a9315a0e37e7383"
-
-"@types/source-map@*":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@types/source-map/-/source-map-0.5.0.tgz#dd34bbd8e32fe4e74f2e3d8ac07f8aa5b45a47ac"
-
-"@types/tapable@*":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-0.2.3.tgz#0888b0f20cc7e58e1c22a1888b4e963eefaa810a"
-
-"@types/uglify-js@*":
-  version "2.6.28"
-  resolved "https://registry.yarnpkg.com/@types/uglify-js/-/uglify-js-2.6.28.tgz#1499b48ca3a44132250b318cdde25b8f45f0c616"
-  dependencies:
-    "@types/source-map" "*"
-
-"@types/webpack-env@^1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.13.0.tgz#3044381647e11ee973c5af2e925323930f691d80"
-
-"@types/webpack@^2.2.12":
-  version "2.2.12"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-2.2.12.tgz#5e2ab82b5b43cfadcb308d3210c082cf67fd9893"
-  dependencies:
-    "@types/node" "*"
-    "@types/tapable" "*"
-    "@types/uglify-js" "*"
-
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
@@ -200,18 +145,6 @@ async@^2.1.2:
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
-
-awesome-typescript-loader@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-3.1.2.tgz#3df192b91a6285f795ca65e63aad114fbb44f710"
-  dependencies:
-    colors "^1.1.2"
-    enhanced-resolve "^3.1.0"
-    loader-utils "^1.0.2"
-    lodash "^4.17.4"
-    mkdirp "^0.5.1"
-    object-assign "^4.1.1"
-    source-map-support "^0.4.11"
 
 aws-sign2@~0.6.0:
   version "0.6.0"
@@ -768,6 +701,10 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bootstrap@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
+
 brace-expansion@^1.0.0:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.6.tgz#7197d7eaa9b87e648390ea61fc66c84427420df9"
@@ -939,10 +876,6 @@ co@^4.6.0:
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
-
-colors@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/colors/-/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
 
 combined-stream@^1.0.5, combined-stream@~1.0.5:
   version "1.0.5"
@@ -1196,7 +1129,7 @@ encoding@^0.1.11:
   dependencies:
     iconv-lite "~0.4.13"
 
-enhanced-resolve@^3.0.0, enhanced-resolve@^3.1.0:
+enhanced-resolve@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-3.1.0.tgz#9f4b626f577245edcf4b2ad83d86e17f4f421dec"
   dependencies:
@@ -1918,19 +1851,11 @@ loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-loader-utils@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
-  dependencies:
-    big.js "^3.1.3"
-    emojis-list "^2.0.0"
-    json5 "^0.5.0"
-
 lodash-es@^4.2.0, lodash-es@^4.2.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
 
-lodash@^4.13.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.6.1:
+lodash@^4.13.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -2153,7 +2078,7 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
+object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -2770,7 +2695,7 @@ source-list-map@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-1.1.1.tgz#1a33ac210ca144d1e561f906ebccab5669ff4cb4"
 
-source-map-support@^0.4.11, source-map-support@^0.4.2:
+source-map-support@^0.4.2:
   version "0.4.14"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.14.tgz#9d4463772598b86271b4f523f6c1f4e02a7d6aef"
   dependencies:
@@ -2976,10 +2901,6 @@ type-is@~1.6.14:
     media-typer "0.3.0"
     mime-types "~2.1.13"
 
-typescript@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.2.1.tgz#4862b662b988a4c8ff691cc7969622d24db76ae9"
-
 ua-parser-js@^0.7.9:
   version "0.7.12"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.12.tgz#04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb"
@@ -3048,7 +2969,7 @@ uuid@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
-uuid@^3.0.0:
+uuid@^3.0.0, uuid@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 

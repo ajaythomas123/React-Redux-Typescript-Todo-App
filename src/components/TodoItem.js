@@ -1,12 +1,12 @@
 import React from 'react';
 
-const TodoItem = (props) => {
+export default function TodoItem(props) {
   return (
-    <div>
-    <h2>{props.text}</h2>
-    <h3>skj</h3>
-    </div>
-  )
+    <li className="list-group-item">
+      <div className="row">
+        <span className="col-md-11" style={{textDecoration: props.active ? 'line-through' : 'none'}} onClick={props.onToggleTodo}>{props.text}</span>
+        <span className="col-md-1 glyphicon glyphicon-remove" onClick={props.onRemoveTodo}></span>
+      </div>
+    </li>
+  );
 }
-
-export default TodoItem;
