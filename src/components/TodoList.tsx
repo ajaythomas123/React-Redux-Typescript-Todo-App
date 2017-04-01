@@ -9,21 +9,20 @@ interface TodoListProps extends ITodoList {
 
 export default function TodoList(props: TodoListProps) {
   return (
-    <div className="col-md-12">
-      <ul className="list-group">
-      {
-        props.todos.map(todo =>
-          <TodoItem
-            key={todo.id}
-            id={todo.id}
-            text={todo.text}
-            active={todo.active}
-            onRemoveTodo={props.onRemoveTodo.bind(null, todo.id)}
-            onToggleTodo={props.onToggleTodo.bind(null, todo.id)}
-          />
-        )
-      }
-      </ul>
-    </div>
+    <ul className="list-group">
+    {
+      props.todos.map((todo, index) =>
+        <TodoItem
+          key={todo.id}
+          id={todo.id}
+          isFirst={index === 0}
+          text={todo.text}
+          completed={todo.completed}
+          onRemoveTodo={props.onRemoveTodo.bind(null, todo.id)}
+          onToggleTodo={props.onToggleTodo.bind(null, todo.id)}
+        />
+      )
+    }
+    </ul>
   );
 }
