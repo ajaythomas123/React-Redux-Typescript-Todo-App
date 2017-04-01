@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import { dispatch } from 'redux';
 import { removeTodo, toggleTodo } from '../actions/index';
 import TodoList from '../components/TodoList';
+import { getFilteredTodos } from '../selectors/index';
 
 const mapStateToProps = (state) => ({
-  todos: state.todos
+  todos: getFilteredTodos(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
