@@ -2,11 +2,10 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { removeTodo, toggleTodo } from '../actions/index';
 import TodoList from '../components/TodoList';
-import { ITodoItem } from '../components/ITodoItem';
-import { IState } from '../reducers/IState';
+import { AppState, Todo } from '../types/index';
 import { getFilteredTodos } from '../selectors/index';
 
-const mapStateToProps = (state: IState) => ({
+const mapStateToProps = (state: AppState) => ({
   todos: getFilteredTodos(state)
 });
 

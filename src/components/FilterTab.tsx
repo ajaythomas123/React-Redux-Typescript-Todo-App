@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { IFilter } from './IFilter';
+import { FilterTabProps } from '../types/index';
 
-interface FilterProps extends IFilter {
-  onSetFilter: (filter: string) => void;
-}
+const FilterTab = (props: FilterTabProps) => {
+  const _onFilterClick = (): void => {
+    props.onFilterClick(props.filterName);
+  }
 
-export default function FilterTab(props: FilterProps) {
   return (
-    <ul className="nav nav-tabs">
-        <li role="presentation" className={props.filter === 'All' ? 'active' : ''}><a onClick={props.onSetFilter.bind(null, 'All')}>All</a></li>
-        <li role="presentation" className={props.filter == 'Pending' ? 'active' : ''}><a onClick={props.onSetFilter.bind(null, 'Pending')}>Pending</a></li>
-        <li role="presentation" className={props.filter == 'Completed' ? 'active' : ''}><a onClick={props.onSetFilter.bind(null, 'Completed')}>Completed</a></li>
-    </ul>
+    <li
+      role="presentation"
+      className={props.active ? 'active' : ''}>
+      <a onClick={_onFilterClick}>{props.filterName}</a>
+    </li>
   );
 }
+
+
+export default FilterTab;

@@ -1,13 +1,12 @@
 import { createSelector } from 'reselect';
-import { IState } from '../reducers/IState';
-import { ITodoItem } from '../components/ITodoItem';
+import { AppState, Todo } from '../types/index';
 
-const getTodos = (state: IState) => state.todos;
-const getFilter = (state: IState) => state.filter;
+const getTodos = (state: AppState) => state.todos;
+const getFilter = (state: AppState) => state.filter;
 
 export const getFilteredTodos = createSelector(
   [getTodos, getFilter],
-  (todos: Array<ITodoItem>, filter: string) => filter === 'Completed' ?
+  (todos: Array<Todo>, filter: string) => filter === 'Completed' ?
     todos.filter(todo => todo.completed) :
     filter === 'Pending' ? todos.filter(todo => !todo.completed) : todos
 );

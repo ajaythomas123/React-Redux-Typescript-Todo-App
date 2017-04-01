@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { setFilter } from '../actions/index';
-import FilterTab from '../components/FilterTab';
-import { IState } from '../reducers/IState';
+import Filter from '../components/Filter';
+import { AppState } from '../types/index';
 
-const mapStateToProps = (state: IState) => ({
+const mapStateToProps = (state: AppState) => ({
   filter: state.filter
 });
 
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(FilterTab);
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);

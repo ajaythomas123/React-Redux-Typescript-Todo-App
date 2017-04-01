@@ -1,6 +1,6 @@
 import * as React from 'react';
 import FormWrapper from '../containers/FormWrapper';
-import FilterTabWrapper from '../containers/FilterTabWrapper';
+import FilterWrapper from '../containers/FilterWrapper';
 import TodoListWrapper from '../containers/TodoListWrapper';
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
           </div>
           <div className="row" style={{ marginTop: '10px' }}>
             <div className="col-md-12">
-              <FilterTabWrapper />
+              <FilterWrapper />
               <TodoListWrapper />
             </div>
           </div>
