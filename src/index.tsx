@@ -1,20 +1,21 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import TodoItem from './components/TodoItem';
+import App from './App';
 
-const render = (Component) => {
+const render = (Component: any) => {
   ReactDOM.render(
     <AppContainer>
-      <Component/>
+      <Component />
     </AppContainer>,
     document.getElementById('root')
   );
-}
-render(TodoItem);
+};
+
+render(App);
 
 if(module.hot) {
-  module.hot.accept('./components/TodoItem', () => {
-    render(TodoItem);
+  module.hot.accept('./App', () => {
+    render(App);
   });
 }

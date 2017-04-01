@@ -19,7 +19,8 @@ module.exports = {
 
   devServer: {
     hot: true,
-    contentBase: '.'
+    contentBase: '.',
+    inline: true
   },
 
   resolve: {
@@ -31,6 +32,9 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: [
+          {
+            loader: 'react-hot-loader/webpack'
+          },
           {
             loader: 'babel-loader'
           },

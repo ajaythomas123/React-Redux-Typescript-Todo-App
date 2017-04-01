@@ -5,7 +5,7 @@ const TodoItem = (props: any) => {
   return (
     <div>
     <h2>{props.text}</h2>
-    <h3>skj</h3>
+    <h3>sksa</h3>
     </div>
   )
 }

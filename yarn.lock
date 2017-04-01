@@ -12,6 +12,12 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-hot-loader@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-hot-loader/-/react-hot-loader-3.0.1.tgz#d15e3af68595c5d6c5576cfcc18e28d578924fce"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-redux@^4.4.38":
   version "4.4.38"
   resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-4.4.38.tgz#771c9293fa835107eb5ac2e4ef8d52e54f2ed4ff"
