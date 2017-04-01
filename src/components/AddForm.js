@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 export default class AddForm extends React.Component {
   constructor(props) {
@@ -10,12 +9,14 @@ export default class AddForm extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   onAddClick() {
-    this.props.onAddTodo(this.state.value);
-    this.setState({value: ''});
+    if (this.state.value !== '') {
+      this.props.onAddTodo(this.state.value);
+      this.setState({ value: '' });
+    }
   }
 
   render() {
@@ -23,9 +24,9 @@ export default class AddForm extends React.Component {
       <div className="col-md-12">
         <div className="input-group">
           <input className="form-control" type="text" placeholder="Enter todo text" value={this.state.value} onChange={this.handleChange.bind(this)} />
-          <span className="input-group-addon" onClick={this.onAddClick.bind(this)}>Add</span>
+          <span className="btn input-group-addon" onClick={this.onAddClick.bind(this)}>Add</span>
         </div>
       </div>
-    )
+    );
   }
 }
