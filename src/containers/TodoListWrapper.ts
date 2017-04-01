@@ -4,14 +4,10 @@ import { removeTodo, toggleTodo } from '../actions/index';
 import TodoList from '../components/TodoList';
 import { ITodoItem } from '../components/ITodoItem';
 import { IState } from '../reducers/IState';
-
-const getFilteredTodos = (todos: Array<ITodoItem>, filter: string) => {
-  return filter === 'Completed' ? todos.filter(todo => todo.completed) :
-    filter === 'Pending' ? todos.filter(todo => !todo.completed) : todos;
-};
+import { getFilteredTodos } from '../selectors/index';
 
 const mapStateToProps = (state: IState) => ({
-  todos: getFilteredTodos(state.todos, state.filter)
+  todos: getFilteredTodos(state)
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
