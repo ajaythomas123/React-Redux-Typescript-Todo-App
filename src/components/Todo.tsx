@@ -3,11 +3,13 @@ import { TodoProps } from '../types/index';
 
 const Todo = (props: TodoProps) => {
   const _onRemoveTodo = () => {
-    props.onRemoveTodo(props.id);
+    const { onRemoveTodo } = props;
+    onRemoveTodo(props.id);
   };
 
   const _onToggleTodo = () => {
-    props.onToggleTodo(props.id);
+    const { onToggleTodo } = props;
+    onToggleTodo(props.id);
   };
 
   return (
@@ -33,6 +35,6 @@ const Todo = (props: TodoProps) => {
       </div>
     </li>
   );
-}
+};
 
 export default Todo;

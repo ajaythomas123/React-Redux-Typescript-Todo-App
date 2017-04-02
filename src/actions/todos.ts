@@ -1,4 +1,3 @@
-import { createAction } from 'redux-actions';
 import { v4 } from 'uuid';
 
 export const addTodo = (text: string) => ({

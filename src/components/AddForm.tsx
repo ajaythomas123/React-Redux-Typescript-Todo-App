@@ -19,15 +19,15 @@ export default class AddForm extends React.Component<AddFormProps, AddFormState>
     this.onAddClick = this.onAddClick.bind(this);
   }
 
-  handleChange(event: any) {
-    this.setState({ value: event.target.value });
-  }
-
   onAddClick() {
     if (this.state.value !== '') {
       this.props.onAddTodo(this.state.value);
       this.setState({ value: '' });
     }
+  }
+
+  handleChange(event: any) {
+    this.setState({ value: event.target.value });
   }
 
   render() {
@@ -46,6 +46,6 @@ export default class AddForm extends React.Component<AddFormProps, AddFormState>
           </span>
         </div>
       </div>
-    )
+    );
   }
 }

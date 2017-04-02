@@ -7,6 +7,7 @@ const Filter = (props: FilterProps) => (
     {
       ['All', 'Pending', 'Completed'].map(filterName =>
         <FilterTab
+          key={filterName}
           active={props.filter === filterName}
           filterName={filterName}
           onFilterClick={props.onSetFilter}

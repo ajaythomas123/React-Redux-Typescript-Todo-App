@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 import { removeTodo, toggleTodo } from '../actions/index';
 import TodoList from '../components/TodoList';
 import { AppState, Todo } from '../types/index';
-import { getFilteredTodos } from '../selectors/index';
+import getFilteredTodos from '../selectors/index';
 
 const mapStateToProps = (state: AppState) => ({
   todos: getFilteredTodos(state)

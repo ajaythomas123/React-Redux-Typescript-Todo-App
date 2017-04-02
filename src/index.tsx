@@ -1,10 +1,10 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import AppReducer from './reducers/index';
 import { createStore } from 'redux';
+import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader';
 import App from './components/App';
+import AppReducer from './reducers/index';
 
 const store = createStore(AppReducer, (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__());
 
