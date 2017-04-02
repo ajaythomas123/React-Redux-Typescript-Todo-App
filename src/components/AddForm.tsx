@@ -24,8 +24,10 @@ export default class AddForm extends React.Component<AddFormProps, AddFormState>
   }
 
   onAddClick() {
-    this.props.onAddTodo(this.state.value);
-    this.setState({ value: '' });
+    if (this.state.value !== '') {
+      this.props.onAddTodo(this.state.value);
+      this.setState({ value: '' });
+    }
   }
 
   render() {

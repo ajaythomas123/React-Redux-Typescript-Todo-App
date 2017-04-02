@@ -19,8 +19,7 @@ module.exports = {
 
   devServer: {
     hot: true,
-    contentBase: '.',
-    inline: true
+    contentBase: '.'
   },
 
   resolve: {
