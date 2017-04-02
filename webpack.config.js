@@ -6,42 +6,42 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './src/index.js'
+    './src/index.jsx',
   ],
 
   output: {
     path: resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/dist'
+    publicPath: '/dist',
   },
 
   devtool: 'source-map',
 
   devServer: {
     hot: true,
-    contentBase: '.'
+    contentBase: '.',
   },
 
   resolve: {
-    extensions: ['.js', '.json']
+    extensions: ['.js', '.jsx', '.json'],
   },
 
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         use: [
           {
-            loader: 'babel-loader'
-          }
-        ]
-      }
-    ]
+            loader: 'babel-loader',
+          },
+        ],
+      },
+    ],
   },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
 
-    new webpack.NamedModulesPlugin()
-  ]
-}
+    new webpack.NamedModulesPlugin(),
+  ],
+};

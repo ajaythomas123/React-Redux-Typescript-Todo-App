@@ -1,11 +1,24 @@
 import { createSelector } from 'reselect';
 
-const getTodos = (state) => state.todos;
-const getFilter = (state) => state.filter;
+const getTodos = state => state.todos;
+const getFilter = state => state.filter;
 
-export const getFilteredTodos = createSelector(
+const getFilteredTodos = createSelector(
   [getTodos, getFilter],
-  (todos, filter) => filter === 'Completed' ?
-    todos.filter(todo => todo.completed) :
-    filter === 'Pending' ? todos.filter(todo => !todo.completed) : todos
+  (todos, filter) => {
+    switch (filter) {
+      case 'Completed':
+        return filter(todo => todo.completed);
+
+      case 'Pending':
+        return filter(todo => !todo.completed);
+
+      case 'All':
+      default:
+        return todos;
+    }
+  },
 );
+
+export default getFilteredTodos;
+

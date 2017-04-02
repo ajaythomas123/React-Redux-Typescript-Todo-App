@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { filter } from './filters';
-import { todos } from './todos';
+import filter from './filters';
+import todos from './todos';
 
 const AppReducer = combineReducers({
   filter,
-  todos
+  todos,
 });
 
 export default AppReducer;

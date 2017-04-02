@@ -1,9 +1,9 @@
 export {
   addTodo,
   removeTodo,
-  toggleTodo
+  toggleTodo,
 } from './todos';
 
 export {
-  setFilter
+  setFilter,
 } from './filters';
